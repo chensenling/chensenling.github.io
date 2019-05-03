@@ -7,18 +7,18 @@
   
   <title>sql的知识 | chensenling的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="需要理解两个关系的笛卡儿积，等值连接和自然连接的概念和区别：  1. 卡尔积对两个关系 R 和 S 进行操作，产生的关系中元组个数为两个关系中元组个 数之积，属性个数为两个关系属性之和，如学生和成绩两个表做笛卡儿积操作后得到表的属性为：(学生表学号，课程表学号，姓名，性别，班级，课程名称，分数)。    2. 等值连接是在笛卡尔积的结果上再进行选择操作，挑选关系第 i 个分量与第(r+j) 个分量">
+  <meta name="description" content="需要理解两个关系的笛卡儿积，等值连接和自然连接的概念和区别：  1. 卡尔积对两个关系 R 和 S 进行操作，产生的关系中元组个数为两个关系中元组个 数之积，属性个数为两个关系属性之和，如学生和成绩两个表做笛卡儿积操作后得到表的属性为：(学生表学号，课程表学号，姓名，性别，班级，课程名称，分数)。    2. 等值连接是在笛卡尔积的结果上再进行选择操作，挑选关系第 i 个分量与第(r+j) 个分">
 <meta name="keywords" content="mysql数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sql的知识">
 <meta property="og:url" content="http://chensenling.github.io/2019/05/03/sql/index.html">
 <meta property="og:site_name" content="chensenling的blog">
-<meta property="og:description" content="需要理解两个关系的笛卡儿积，等值连接和自然连接的概念和区别：  1. 卡尔积对两个关系 R 和 S 进行操作，产生的关系中元组个数为两个关系中元组个 数之积，属性个数为两个关系属性之和，如学生和成绩两个表做笛卡儿积操作后得到表的属性为：(学生表学号，课程表学号，姓名，性别，班级，课程名称，分数)。    2. 等值连接是在笛卡尔积的结果上再进行选择操作，挑选关系第 i 个分量与第(r+j) 个分量">
+<meta property="og:description" content="需要理解两个关系的笛卡儿积，等值连接和自然连接的概念和区别：  1. 卡尔积对两个关系 R 和 S 进行操作，产生的关系中元组个数为两个关系中元组个 数之积，属性个数为两个关系属性之和，如学生和成绩两个表做笛卡儿积操作后得到表的属性为：(学生表学号，课程表学号，姓名，性别，班级，课程名称，分数)。    2. 等值连接是在笛卡尔积的结果上再进行选择操作，挑选关系第 i 个分量与第(r+j) 个分">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-03T15:59:44.353Z">
+<meta property="og:updated_time" content="2019-05-03T16:25:56.976Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sql的知识">
-<meta name="twitter:description" content="需要理解两个关系的笛卡儿积，等值连接和自然连接的概念和区别：  1. 卡尔积对两个关系 R 和 S 进行操作，产生的关系中元组个数为两个关系中元组个 数之积，属性个数为两个关系属性之和，如学生和成绩两个表做笛卡儿积操作后得到表的属性为：(学生表学号，课程表学号，姓名，性别，班级，课程名称，分数)。    2. 等值连接是在笛卡尔积的结果上再进行选择操作，挑选关系第 i 个分量与第(r+j) 个分量">
+<meta name="twitter:description" content="需要理解两个关系的笛卡儿积，等值连接和自然连接的概念和区别：  1. 卡尔积对两个关系 R 和 S 进行操作，产生的关系中元组个数为两个关系中元组个 数之积，属性个数为两个关系属性之和，如学生和成绩两个表做笛卡儿积操作后得到表的属性为：(学生表学号，课程表学号，姓名，性别，班级，课程名称，分数)。    2. 等值连接是在笛卡尔积的结果上再进行选择操作，挑选关系第 i 个分量与第(r+j) 个分">
   
     <link rel="alternate" href="/atom.xml" title="chensenling的blog" type="application/atom+xml">
   
@@ -91,7 +91,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>需要理解两个关系的笛卡儿积，等值连接和自然连接的概念和区别： </p>
+        <a id="more"></a>
+<p>需要理解两个关系的笛卡儿积，等值连接和自然连接的概念和区别： </p>
 <pre><code>1. 卡尔积对两个关系 R 和 S 进行操作，产生的关系中元组个数为两个关系中元组个 数之积，属性个数为两个关系属性之和，如学生和成绩两个表做笛卡儿积操作后得到表的属性为：(学生表学号，课程表学号，姓名，性别，班级，课程名称，分数)。 
 
  2. 等值连接是在笛卡尔积的结果上再进行选择操作，挑选关系第 i 个分量与第(r+j) 个分量值相等的元组，这样就过滤去掉了一些行，如上述例子，得到的表结构还是一样，不过每条实例中的学生表学号和课程表学号相同。  
@@ -104,7 +105,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chensenling.github.io/2019/05/03/sql/" data-id="cjv89kzjy00000svl8aqav3bp" class="article-share-link">Share</a>
+      <a data-url="http://chensenling.github.io/2019/05/03/sql/" data-id="cjv8aipxp0000s8vl97k1mwia" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql数据库/">mysql数据库</a></li></ul>
