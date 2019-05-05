@@ -5,19 +5,20 @@
   
 
   
-  <title>Tag: os | chensenling的blog</title>
+  <title>操作系统之存储器管理 | chensenling的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是一个踩坑的blog">
-<meta name="keywords" content="github">
-<meta property="og:type" content="website">
-<meta property="og:title" content="chensenling的blog">
-<meta property="og:url" content="http://chensenling.github.io/tags/os/index.html">
+  <meta name="description" content="存储器管理的功能 * 内存分配 * 内存保护 * 内存扩充 * 地址映射 * 对换 内存分配连续型分配- 单一连续分配 - **分区式分配**      1.固定分区分配     2.动态分区分配     3.动态重定位分区分配 离散型分配内存保护内存扩充地址映射对换">
+<meta name="keywords" content="os">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统之存储器管理">
+<meta property="og:url" content="http://chensenling.github.io/2019/05/05/操作系统之存储器管理/index.html">
 <meta property="og:site_name" content="chensenling的blog">
-<meta property="og:description" content="这是一个踩坑的blog">
+<meta property="og:description" content="存储器管理的功能 * 内存分配 * 内存保护 * 内存扩充 * 地址映射 * 对换 内存分配连续型分配- 单一连续分配 - **分区式分配**      1.固定分区分配     2.动态分区分配     3.动态重定位分区分配 离散型分配内存保护内存扩充地址映射对换">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-05T14:48:31.281Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="chensenling的blog">
-<meta name="twitter:description" content="这是一个踩坑的blog">
+<meta name="twitter:title" content="操作系统之存储器管理">
+<meta name="twitter:description" content="存储器管理的功能 * 内存分配 * 内存保护 * 内存扩充 * 地址映射 * 对换 内存分配连续型分配- 单一连续分配 - **分区式分配**      1.固定分区分配     2.动态分区分配     3.动态重定位分区分配 离散型分配内存保护内存扩充地址映射对换">
   
     <link rel="alternate" href="/atom.xml" title="chensenling的blog" type="application/atom+xml">
   
@@ -68,97 +69,65 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/05/05/操作系统之存储器管理/" class="archive-article-date">
-  <time datetime="2019-05-05T14:34:09.000Z" itemprop="datePublished">5月 5</time>
+        <section id="main"><article id="post-操作系统之存储器管理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/05/操作系统之存储器管理/" class="article-date">
+  <time datetime="2019-05-05T14:34:09.000Z" itemprop="datePublished">2019-05-05</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/05/操作系统之存储器管理/">操作系统之存储器管理</a>
+    <h1 class="article-title" itemprop="name">
+      操作系统之存储器管理
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/05/04/操作系统之处理机管理/" class="archive-article-date">
-  <time datetime="2019-05-04T15:24:05.000Z" itemprop="datePublished">5月 4</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/04/操作系统之处理机管理/">操作系统之处理机管理</a>
-    </h1>
-  
+        <p>存储器管理的功能</p>
+<pre><code>* 内存分配
+* 内存保护
+* 内存扩充
+* 地址映射
+* 对换
+</code></pre><h1 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h1><h2 id="连续型分配"><a href="#连续型分配" class="headerlink" title="连续型分配"></a>连续型分配</h2><pre><code>- 单一连续分配
+- **分区式分配**
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/05/04/操作系统之文件系统/" class="archive-article-date">
-  <time datetime="2019-05-04T15:18:06.000Z" itemprop="datePublished">5月 4</time>
-</a>
+    1.固定分区分配
+    2.动态分区分配
+    3.动态重定位分区分配
+</code></pre><h2 id="离散型分配"><a href="#离散型分配" class="headerlink" title="离散型分配"></a>离散型分配</h2><h1 id="内存保护"><a href="#内存保护" class="headerlink" title="内存保护"></a>内存保护</h1><h1 id="内存扩充"><a href="#内存扩充" class="headerlink" title="内存扩充"></a>内存扩充</h1><h1 id="地址映射"><a href="#地址映射" class="headerlink" title="地址映射"></a>地址映射</h1><h1 id="对换"><a href="#对换" class="headerlink" title="对换"></a>对换</h1>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/04/操作系统之文件系统/">操作系统之文件系统</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/05/04/操作系统之通道/" class="archive-article-date">
-  <time datetime="2019-05-04T15:01:38.000Z" itemprop="datePublished">5月 4</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chensenling.github.io/2019/05/05/操作系统之存储器管理/" data-id="cjvb1x31c0004h4vlndia3vu0" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/04/操作系统之通道/">操作系统之通道</a>
-    </h1>
-  
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os/">os</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/05/04/hexo-github搭建博客概述/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo+github搭建博客概述</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         
