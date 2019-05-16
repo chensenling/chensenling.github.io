@@ -70,6 +70,81 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ti" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/16/ti/" class="article-date">
+  <time datetime="2019-05-16T08:55:02.000Z" itemprop="datePublished">2019-05-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/16/ti/">有五个作业j1,j2,j3,j4,j5进入输入井的时间</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>设有某系统可供用户使用的主存空间为100k，有五个作业j1,j2,j3,j4,j5进入输入井的时间，计算时间和内存要求如下表所示。若作业在处理机上按单道方式运行，且作业按响应比搞着优先调度算法，进程按先来先服务算法，试写出作业的执行顺序，计算响应比，作业的周转时间和平均周转时间。<br>|作业|入井时间|计算时间|需要主存容量|<br>|—|—|—-|—|<br>|J1|10:06|42|18K|<br>|J2|10:18|30|62K|<br>|J3|10:30|24|55K|<br>|J4|10:36|24|12K|<br>|J5|10:42|12|20K|</p>
+<p><strong>解答</strong>：</p>
+<pre><code>[1] J1先进入先调入内存运行，结束时间为10:48，周转时间为 42
+此时，各进程响应比为：
+J2:(10:48-10:18)/30+1=2
+J3:(10:48-10:30)/24+1=1.75
+J4:(10:48-10:36)/24+1=1.5
+J5:(10:48-10:42)/12+1=1.5
+
+所以选择高响应比的进程 J2
+
+[2] 10:48开始运行J2,J2完成运行，结束时间为11:18，周转时间为 60
+此时，各进程响应比为：
+J3:(11:18-10:30)/24+1=3
+J4:(11:18-10:36)/24+1=2.75
+J5:(11:18-10:42)/12+1=4
+
+所以选择高响应比进程 J5
+
+[3] 11:18开始运行进程J5，J5完成运行，结束时间为11:30，周转时间为 48
+此时，各进程响应比为：
+J3:(11:30-10:30)/24+1=3.5
+J4:(11:30-10:36)/24+1=3.35
+
+所以选择高响应比的进程 J3
+
+[4] 11:30开始运行进程J3,J3运行完成，结束时间为 11:54，周转时间为 84
+
+最后运行 J4进程。
+
+[5]11:54开始运行进程J4,J4运行完成，结束时间为 12：18，周转时间为 42
+此时，J4的响应比为：
+        （11:54-10:36)/24+1=4.25
+
+平均周转时间为:(42+60+48+84+42)/5=55.2
+
+各进程响应比为：J1=1        J2=2    J3= 3.5        J4=4.25     J5=4
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chensenling.github.io/2019/05/16/ti/" data-id="cjvqgwtdb0000vsvlrui96zzq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os例题/">os例题</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-操作系统之存储器管理" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/05/操作系统之存储器管理/" class="article-date">
@@ -104,11 +179,17 @@
     1.固定分区分配
     2.动态分区分配
     3.动态重定位分区分配
-</code></pre><h2 id="离散型分配"><a href="#离散型分配" class="headerlink" title="离散型分配"></a>离散型分配</h2><h1 id="内存保护"><a href="#内存保护" class="headerlink" title="内存保护"></a>内存保护</h1><h1 id="内存扩充"><a href="#内存扩充" class="headerlink" title="内存扩充"></a>内存扩充</h1><h1 id="地址映射"><a href="#地址映射" class="headerlink" title="地址映射"></a>地址映射</h1><h1 id="对换"><a href="#对换" class="headerlink" title="对换"></a>对换</h1>
+</code></pre><h2 id="离散型分配"><a href="#离散型分配" class="headerlink" title="离散型分配"></a>离散型分配</h2><pre><code>-分页式存储管理
+-分段式存储管理
+-段页式存储管理
+</code></pre><h1 id="内存保护"><a href="#内存保护" class="headerlink" title="内存保护"></a>内存保护</h1><p>通过<strong>基址寄存器</strong>和<strong>界限寄存器</strong>实现os保护。</p>
+<h1 id="内存扩充"><a href="#内存扩充" class="headerlink" title="内存扩充"></a>内存扩充</h1><h1 id="地址映射"><a href="#地址映射" class="headerlink" title="地址映射"></a>地址映射</h1><pre><code>完成从逻辑地址到物理地址的转换。
+</code></pre><h1 id="对换"><a href="#对换" class="headerlink" title="对换"></a>对换</h1><h2 id="引入对换的目的：提高处理器的利用率和系统吞吐量"><a href="#引入对换的目的：提高处理器的利用率和系统吞吐量" class="headerlink" title="引入对换的目的：提高处理器的利用率和系统吞吐量"></a>引入对换的目的：<strong>提高处理器的利用率和系统吞吐量</strong></h2><p><strong>中级调度</strong>使用了对换</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chensenling.github.io/2019/05/05/操作系统之存储器管理/" data-id="cjvb1x31c0004h4vlndia3vu0" class="article-share-link">Share</a>
+      <a data-url="http://chensenling.github.io/2019/05/05/操作系统之存储器管理/" data-id="cjvqgwth20004vsvlojbjwp4k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os/">os</a></li></ul>
@@ -150,7 +231,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chensenling.github.io/2019/05/04/hexo-github搭建博客概述/" data-id="cjvb1x30q0000h4vlo61thol4" class="article-share-link">Share</a>
+      <a data-url="http://chensenling.github.io/2019/05/04/hexo-github搭建博客概述/" data-id="cjvqgwtgq0001vsvli6rbt3t3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-hexo-github/">hexo hexo+github</a></li></ul>
@@ -194,7 +275,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chensenling.github.io/2019/05/04/操作系统之杂记要点/" data-id="cjvb1x31i0009h4vlvhijj84s" class="article-share-link">Share</a>
+      <a data-url="http://chensenling.github.io/2019/05/04/操作系统之杂记要点/" data-id="cjvqgwth60008vsvlb276rjym" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-简识/">os 简识</a></li></ul>
@@ -237,7 +318,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chensenling.github.io/2019/05/04/操作系统之处理机管理/" data-id="cjvb1x3160001h4vl62mcdhnr" class="article-share-link">Share</a>
+      <a data-url="http://chensenling.github.io/2019/05/04/操作系统之处理机管理/" data-id="cjvqgwth40005vsvlqfp3x78y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os/">os</a></li></ul>
@@ -277,7 +358,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chensenling.github.io/2019/05/04/操作系统之文件系统/" data-id="cjvb1x31a0003h4vlr82pcz9f" class="article-share-link">Share</a>
+      <a data-url="http://chensenling.github.io/2019/05/04/操作系统之文件系统/" data-id="cjvqgwth80009vsvls0cfrhhy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os/">os</a></li></ul>
@@ -319,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chensenling.github.io/2019/05/04/操作系统之通道/" data-id="cjvb1x31h0008h4vlqfrwb1um" class="article-share-link">Share</a>
+      <a data-url="http://chensenling.github.io/2019/05/04/操作系统之通道/" data-id="cjvqgwth9000bvsvlmc03c7ed" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os/">os</a></li></ul>
@@ -367,7 +448,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chensenling.github.io/2019/05/03/Mysql/" data-id="cjvb1x31d0005h4vljm9mjtko" class="article-share-link">Share</a>
+      <a data-url="http://chensenling.github.io/2019/05/03/Mysql/" data-id="cjvqgwth10003vsvld0xyn9sx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql数据库/">mysql数据库</a></li></ul>
@@ -392,7 +473,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-hexo-github/">hexo hexo+github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql数据库/">mysql数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/os/">os</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/os-简识/">os 简识</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-hexo-github/">hexo hexo+github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql数据库/">mysql数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/os/">os</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/os-简识/">os 简识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/os例题/">os例题</a></li></ul>
     </div>
   </div>
 
@@ -402,7 +483,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hexo-hexo-github/" style="font-size: 10px;">hexo hexo+github</a> <a href="/tags/mysql数据库/" style="font-size: 10px;">mysql数据库</a> <a href="/tags/os/" style="font-size: 20px;">os</a> <a href="/tags/os-简识/" style="font-size: 10px;">os 简识</a>
+      <a href="/tags/hexo-hexo-github/" style="font-size: 10px;">hexo hexo+github</a> <a href="/tags/mysql数据库/" style="font-size: 10px;">mysql数据库</a> <a href="/tags/os/" style="font-size: 20px;">os</a> <a href="/tags/os-简识/" style="font-size: 10px;">os 简识</a> <a href="/tags/os例题/" style="font-size: 10px;">os例题</a>
     </div>
   </div>
 
@@ -424,6 +505,10 @@
       <ul>
         
           <li>
+            <a href="/2019/05/16/ti/">有五个作业j1,j2,j3,j4,j5进入输入井的时间</a>
+          </li>
+        
+          <li>
             <a href="/2019/05/05/操作系统之存储器管理/">操作系统之存储器管理</a>
           </li>
         
@@ -437,10 +522,6 @@
         
           <li>
             <a href="/2019/05/04/操作系统之处理机管理/">操作系统之处理机管理</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/04/操作系统之文件系统/">操作系统之文件系统</a>
           </li>
         
       </ul>
