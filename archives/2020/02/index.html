@@ -5,11 +5,11 @@
   
 
   
-  <title>Hexo</title>
+  <title>Archives: 2020/2 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2020/02/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
@@ -64,52 +64,36 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-git push 问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/17/git%20push%20%E9%97%AE%E9%A2%98/" class="article-date">
-  <time datetime="2020-02-17T08:02:51.513Z" itemprop="datePublished">2020-02-17</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/02/17/git%20push%20%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  <time datetime="2020-02-17T08:02:51.513Z" itemprop="datePublished">Feb 17</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/17/git%20push%20%E9%97%AE%E9%A2%98/">git push 问题</a>
+      <a class="archive-article-title" href="/2020/02/17/git%20push%20%E9%97%AE%E9%A2%98/">git push 问题</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="git-push-之-问题"><a href="#git-push-之-问题" class="headerlink" title="git push 之 问题"></a>git push 之 问题</h1><h3 id="fatal-TaskCanceledException-encountered"><a href="#fatal-TaskCanceledException-encountered" class="headerlink" title="fatal: TaskCanceledException encountered."></a>fatal: TaskCanceledException encountered.</h3><p>解决：</p>
-<p>配置全局量</p>
-<pre><code>config --global credential.helper manager </code></pre><h2 id="​"><a href="#​" class="headerlink" title="​    "></a>​    </h2><h3 id="fatal-TaskCanceledException-encountered-1"><a href="#fatal-TaskCanceledException-encountered-1" class="headerlink" title="fatal: TaskCanceledException encountered."></a>fatal: TaskCanceledException encountered.</h3><h3 id="A-task-was-canceled"><a href="#A-task-was-canceled" class="headerlink" title="A task was canceled."></a>A task was canceled.</h3><p>   出现这个后，提示输入远程库的账号&amp;密码<br>   ，每次push都会出现太麻烦。</p>
-<p>   解决方法：添加配置文件.gitconfig<br>   在根目录，我的在我的系统盘个人用户下面。</p>
-<p>   cmd命令行：</p>
-<pre><code>git config --global credential.helper store</code></pre><p>打开.gitconfig可以看见如下：</p>
-<pre><code>[user]
-    name = *****
-    email = *********@**.com
-[credential]
-    helper = store</code></pre><p>这样设置后，出来第一次输入账号&amp;密码后，以后的提交将不再进行账号&amp;密码的输入。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/17/git%20push%20%E9%97%AE%E9%A2%98/" data-id="ck6rz3cmi0000b4up7krubxot" class="article-share-link">Share</a>
-      
-      
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
+  
+  
+    </div></section>
   
 
 
