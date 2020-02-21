@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://chensenling.github.io">
-  <title>git push 问题 | 弥谈的博客</title>
+  <title>Markdown 学习 | 弥谈的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="git push 之 问题fatal: TaskCanceledException encountered.解决： 配置全局量 config --global credential.helper manager ​    fatal: TaskCanceledException encountered.A task was canceled.   出现这个后，提示输入远程库的账号&amp;密码">
+  <meta name="description" content="Makedown 语法部分 代码块将代码块写在前面，是因为以下将大量用到代码块，以免读者混淆。代码块 敲一个tab 或者4个空格键，完成代码块的创建。 行内代码块使用 &#96; 包裹内容。 注意：一定tab开始位置必须在最左边。例：行内代码：    dfsddfsdsfdsdfsdfsdfsdfsdffdsfdfsds        代码块： asdadsadsadsadsadsadsadsadsads">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git push 问题">
-<meta property="og:url" content="https://chensenling.github.io/2020/02/17/git%20push%20%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="Markdown 学习">
+<meta property="og:url" content="https://chensenling.github.io/2020/02/21/Markdown%20%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="弥谈的博客">
-<meta property="og:description" content="git push 之 问题fatal: TaskCanceledException encountered.解决： 配置全局量 config --global credential.helper manager ​    fatal: TaskCanceledException encountered.A task was canceled.   出现这个后，提示输入远程库的账号&amp;密码">
+<meta property="og:description" content="Makedown 语法部分 代码块将代码块写在前面，是因为以下将大量用到代码块，以免读者混淆。代码块 敲一个tab 或者4个空格键，完成代码块的创建。 行内代码块使用 &#96; 包裹内容。 注意：一定tab开始位置必须在最左边。例：行内代码：    dfsddfsdsfdsdfsdfsdfsdfsdffdsfdfsds        代码块： asdadsadsadsadsadsadsadsadsads">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-17T08:02:51.513Z">
-<meta property="article:modified_time" content="2020-02-17T08:09:08.615Z">
+<meta property="article:published_time" content="2020-02-21T09:49:13.757Z">
+<meta property="article:modified_time" content="2020-02-18T08:35:41.218Z">
 <meta property="article:author" content="弥谈">
 <meta property="article:tag" content="‘blog’">
 <meta name="twitter:card" content="summary">
@@ -155,37 +155,141 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git push 问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Markdown 学习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      git push 问题
+      Markdown 学习
     </h1>
   
 
         
-        <a href="/2020/02/17/git%20push%20%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-02-17T08:02:51.513Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
+        <a href="/2020/02/21/Markdown%20%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2020-02-21T09:49:13.757Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="git-push-之-问题"><a href="#git-push-之-问题" class="headerlink" title="git push 之 问题"></a>git push 之 问题</h1><h3 id="fatal-TaskCanceledException-encountered"><a href="#fatal-TaskCanceledException-encountered" class="headerlink" title="fatal: TaskCanceledException encountered."></a>fatal: TaskCanceledException encountered.</h3><p>解决：</p>
-<p>配置全局量</p>
-<pre><code>config --global credential.helper manager </code></pre><h2 id="​"><a href="#​" class="headerlink" title="​    "></a>​    </h2><h3 id="fatal-TaskCanceledException-encountered-1"><a href="#fatal-TaskCanceledException-encountered-1" class="headerlink" title="fatal: TaskCanceledException encountered."></a>fatal: TaskCanceledException encountered.</h3><h3 id="A-task-was-canceled"><a href="#A-task-was-canceled" class="headerlink" title="A task was canceled."></a>A task was canceled.</h3><p>   出现这个后，提示输入远程库的账号&amp;密码<br>   ，每次push都会出现太麻烦。</p>
-<p>   解决方法：添加配置文件.gitconfig<br>   在根目录，我的在我的系统盘个人用户下面。</p>
-<p>   cmd命令行：</p>
-<pre><code>git config --global credential.helper store</code></pre><p>打开.gitconfig可以看见如下：</p>
-<pre><code>[user]
-    name = *****
-    email = *********@**.com
-[credential]
-    helper = store</code></pre><p>这样设置后，出来第一次输入账号&amp;密码后，以后的提交将不再进行账号&amp;密码的输入。</p>
+        <h1 id="Makedown-语法部分"><a href="#Makedown-语法部分" class="headerlink" title="Makedown 语法部分"></a>Makedown 语法部分</h1><hr>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>将代码块写在前面，是因为以下将大量用到代码块，以免读者混淆。<br>代码块 敲一个tab 或者4个空格键，完成代码块的创建。</p>
+<p>行内代码块使用 ` 包裹内容。</p>
+<p>注意：一定tab开始位置必须在最左边。<br>例：行内代码：<br>    <code>dfsddfsdsfdsdfsdfsdfsdfsdffdsfdfsds</code><br>        代码块：</p>
+<pre><code>asdadsadsadsadsadsadsadsadsadsa\dfsd
+dsfadfadfsadfsadf
+dfsadfsadfa
+fadfsdfsafd
+afsdssfds</code></pre><p>​<br>​        </p>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>代码：</p>
+<pre><code># 一号标题
+## 二号标题
+### 三号标题
+#### 四号标题
+##### 五号标题
+###### 六号标题</code></pre><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><pre><code>斜体 / 粗体
+代码：
+*斜体* / _斜体_
+**粗体** 
+***斜粗体***
+~~删除线~~</code></pre><p>效果：<br><em>斜体</em> / <em>斜体</em><br><strong>粗体</strong><br><strong><em>斜粗体</em></strong><br><del>删除线</del></p>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>Markdown 具有两种形式的链接语法格式：<strong>行内式</strong>和<strong>参考式</strong>两种。</p>
+<h3 id="行内式"><a href="#行内式" class="headerlink" title="行内式"></a>行内式</h3><p>语法格式：    </p>
+<pre><code>[超链接](链接地址)</code></pre><p>例：</p>
+<pre><code>这是百度的超链接 [baidu](http://www.baidu.com)</code></pre><p>这是百度的超链接 <a href="http://www.baidu.com" target="_blank" rel="noopener">baidu</a></p>
+<p>行内样式 还具有一个 title 属性，作用 为 鼠标悬浮时 出现链接的标题<br>语法格式：<br> [超链接](链接地址 “地址的标题”)</p>
+<p>例：</p>
+<pre><code>这是百度的链接[baidu](http://www.baidu.com &quot;this baidu&quot;)</code></pre><p>这是百度的链接<a href="http://www.baidu.com" target="_blank" rel="noopener" title="this baidu">baidu</a></p>
+<h3 id="参考式"><a href="#参考式" class="headerlink" title="参考式"></a>参考式</h3><p>参考式与行内式最大的区别在与参考式能 先给链接 标上标号 最后统一的完成 链接地址的赋予。<br>而 将大段的链接地址 变为了一个 特定的 标号，这将大大减少编辑的工作量</p>
+<p>语法格式：<br>[链接文字][标号] / [链接文字][]</p>
+<p>例：</p>
+<pre><code>下面有三个顶尖的互联网企业的网址分别为 [阿里巴巴][1] 、[腾讯][2] 、[百度][3]。
+
+[1]:http://alibaba.com
+
+[2]:http://tencent.com
+
+[3]:http://baidu.com</code></pre><p>下面有三个顶尖的互联网企业的网址分别为 <a href="http://alibaba.com" target="_blank" rel="noopener">阿里巴巴</a> 、<a href="http://tencent.com" target="_blank" rel="noopener">腾讯</a> 、<a href="http://baidu.com" target="_blank" rel="noopener">百度</a>。</p>
+<h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><p>{  #index}<br>将文字或其他自动转化为 链接<br>语法格式：<br>&lt;链接文字&gt;</p>
+<pre><code>例：
+这是邮箱&lt;1603565928@example.com&gt;</code></pre><p>这是邮箱<a href="mailto:&#49;&#54;&#48;&#x33;&#53;&#54;&#53;&#57;&#50;&#x38;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#111;&#109;">&#49;&#54;&#48;&#x33;&#53;&#54;&#53;&#57;&#50;&#x38;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#111;&#109;</a></p>
+<h2 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h2><p>锚点 就是在当前页面任意<strong>标题</strong>位置做的标记，便于快捷的定位到取得位置。</p>
+<p>语法格式：<br>标题 { #索引}</p>
+<ul>
+<li><p>锚点标记必须位于标题的后面</p>
+<pre><code>例：
+跳转到[自动链接](#index)</code></pre><p>  跳转到<a href="#index">自动链接</a></p>
+</li>
+</ul>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>列表 分为 无序列表 和有序列表。<br>无序列表：<br>+、-、*</p>
+<pre><code>例：
++ 测试一
+- 测试二
+* 测试三
+* </code></pre><ul>
+<li>测试一</li>
+</ul>
+<ul>
+<li>测试二</li>
+</ul>
+<ul>
+<li>测试三</li>
+</ul>
+<p>有序列表：<br>数字加小数点（.）</p>
+<pre><code>例：
+1. test1
+2. test2</code></pre><ol>
+<li>test1</li>
+<li>test2<h6 id="列表注意"><a href="#列表注意" class="headerlink" title="列表注意"></a>列表注意</h6>在列表中希望得到 如 2009. 1这样的日期或其他什么的时候，应注意使用 转义符 \  将 . 保留下来。<br>例：</li>
+</ol>
+<ul>
+<li><ol start="2019">
+<li>2.3  </li>
+</ol>
+</li>
+<li>2019.2.3 使用转义符 \</li>
+</ul>
+<h3 id="定义型列表"><a href="#定义型列表" class="headerlink" title="定义型列表"></a>定义型列表</h3><p>名词进行定义的，一个 ：加上一个tab（四个空格）</p>
+<pre><code>markdown
+:    Markdown是标记型语言
+
+github
+:    github是一个同性交流的网站</code></pre><p>markdown</p>
+<p>:    Markdown是标记型语言</p>
+<dl><dt>github</dt><dd>github是一个同性交流的网站</dd></dl><h3 id="列表缩进"><a href="#列表缩进" class="headerlink" title="列表缩进"></a>列表缩进</h3><ul>
+<li><p>但我不能放歌， 悄悄是别离的笙箫； 夏虫也为我沉默， 沉默是今晚的康桥！</p>
+<p>  悄悄的我走了， 正如我悄悄的来；    我挥挥衣袖，不带走一片云彩。</p>
+</li>
+</ul>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>在引用块中 Markdown的语法有效，而在代码块中一切的Markdown语法无效。<br>符号：<br>    &gt;</p>
+<blockquote>
+<p>一级引用</p>
+<blockquote>
+<ul>
+<li>二级引用</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>插入图片和超链接相似。图片=！+超链接<br>格式：</p>
+<pre><code>![图片](图片链接)</code></pre><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><pre><code>one|two|three
+-|-|-
+1|2|3</code></pre><table>
+<thead>
+<tr>
+<th>one</th>
+<th>two</th>
+<th>three</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody></table>
 
       
 
@@ -265,7 +369,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://chensenling.github.io/2020/02/17/git%20push%20%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://chensenling.github.io/2020/02/21/Markdown%20%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -279,15 +383,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/21/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/02/21/%E5%9F%BA%E4%BA%8Ehexo%20%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BA%20&%20%E4%BD%BF%E7%94%A8%20%20%E2%80%94%E2%80%94%E6%9C%AC%E5%9C%B0%E7%AF%87/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Git常用命令
+          基于hexo 的博客基础搭建 &amp; 使用  ——本地篇
         
       </div>
     </a>
   
+  
+    <a href="/2020/02/21/Spawn%20failed%20%E9%97%AE%E9%A2%98%20/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spawn failed 问题 </div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

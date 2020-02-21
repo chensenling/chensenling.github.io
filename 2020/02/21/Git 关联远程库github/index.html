@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://chensenling.github.io">
-  <title>git push 问题 | 弥谈的博客</title>
+  <title>Git 关联远程库github | 弥谈的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="git push 之 问题fatal: TaskCanceledException encountered.解决： 配置全局量 config --global credential.helper manager ​    fatal: TaskCanceledException encountered.A task was canceled.   出现这个后，提示输入远程库的账号&amp;密码">
+  <meta name="description" content="配置本地Git库和远程Github库连接由于Github 可以使用ssh(Secure Shell)加密方式进行的远程连接。 本地Git库和远程的github库，之间github需要配置本地库物理机的公钥 ，本地物理机具有特有的私钥。这样github就能根据公钥判断，推送的（push）人对不对。 所以，我们现在要先获得本地Git的公钥和私钥。在cmd命令行窗口，输入以下命令。 ssh-keygen">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git push 问题">
-<meta property="og:url" content="https://chensenling.github.io/2020/02/17/git%20push%20%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="Git 关联远程库github">
+<meta property="og:url" content="https://chensenling.github.io/2020/02/21/Git%20%E5%85%B3%E8%81%94%E8%BF%9C%E7%A8%8B%E5%BA%93github/index.html">
 <meta property="og:site_name" content="弥谈的博客">
-<meta property="og:description" content="git push 之 问题fatal: TaskCanceledException encountered.解决： 配置全局量 config --global credential.helper manager ​    fatal: TaskCanceledException encountered.A task was canceled.   出现这个后，提示输入远程库的账号&amp;密码">
+<meta property="og:description" content="配置本地Git库和远程Github库连接由于Github 可以使用ssh(Secure Shell)加密方式进行的远程连接。 本地Git库和远程的github库，之间github需要配置本地库物理机的公钥 ，本地物理机具有特有的私钥。这样github就能根据公钥判断，推送的（push）人对不对。 所以，我们现在要先获得本地Git的公钥和私钥。在cmd命令行窗口，输入以下命令。 ssh-keygen">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-17T08:02:51.513Z">
-<meta property="article:modified_time" content="2020-02-17T08:09:08.615Z">
+<meta property="article:published_time" content="2020-02-21T09:49:13.741Z">
+<meta property="article:modified_time" content="2020-02-14T08:33:32.555Z">
 <meta property="article:author" content="弥谈">
 <meta property="article:tag" content="‘blog’">
 <meta name="twitter:card" content="summary">
@@ -155,37 +155,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git push 问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Git 关联远程库github" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      git push 问题
+      Git 关联远程库github
     </h1>
   
 
         
-        <a href="/2020/02/17/git%20push%20%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-02-17T08:02:51.513Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
+        <a href="/2020/02/21/Git%20%E5%85%B3%E8%81%94%E8%BF%9C%E7%A8%8B%E5%BA%93github/" class="archive-article-date">
+  	<time datetime="2020-02-21T09:49:13.741Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="git-push-之-问题"><a href="#git-push-之-问题" class="headerlink" title="git push 之 问题"></a>git push 之 问题</h1><h3 id="fatal-TaskCanceledException-encountered"><a href="#fatal-TaskCanceledException-encountered" class="headerlink" title="fatal: TaskCanceledException encountered."></a>fatal: TaskCanceledException encountered.</h3><p>解决：</p>
-<p>配置全局量</p>
-<pre><code>config --global credential.helper manager </code></pre><h2 id="​"><a href="#​" class="headerlink" title="​    "></a>​    </h2><h3 id="fatal-TaskCanceledException-encountered-1"><a href="#fatal-TaskCanceledException-encountered-1" class="headerlink" title="fatal: TaskCanceledException encountered."></a>fatal: TaskCanceledException encountered.</h3><h3 id="A-task-was-canceled"><a href="#A-task-was-canceled" class="headerlink" title="A task was canceled."></a>A task was canceled.</h3><p>   出现这个后，提示输入远程库的账号&amp;密码<br>   ，每次push都会出现太麻烦。</p>
-<p>   解决方法：添加配置文件.gitconfig<br>   在根目录，我的在我的系统盘个人用户下面。</p>
-<p>   cmd命令行：</p>
-<pre><code>git config --global credential.helper store</code></pre><p>打开.gitconfig可以看见如下：</p>
-<pre><code>[user]
-    name = *****
-    email = *********@**.com
-[credential]
-    helper = store</code></pre><p>这样设置后，出来第一次输入账号&amp;密码后，以后的提交将不再进行账号&amp;密码的输入。</p>
+        <h1 id="配置本地Git库和远程Github库连接"><a href="#配置本地Git库和远程Github库连接" class="headerlink" title="配置本地Git库和远程Github库连接"></a>配置本地Git库和远程Github库连接</h1><p>由于Github 可以使用ssh(Secure Shell)加密方式进行的远程连接。</p>
+<p>本地Git库和远程的github库，之间github需要配置本地库物理机的公钥 ，本地物理机具有特有的私钥。这样github就能根据公钥判断，推送的（push）人对不对。</p>
+<p>所以，我们现在要先获得本地Git的公钥和私钥。<br>在cmd命令行窗口，输入以下命令。</p>
+<pre><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code></pre><dl><dt><a href="mailto:youremail@example.com">youremail@example.com</a></dt><dd>你自己的电子邮箱</dd></dl><p>然后，一路enter，最后打开你的系统盘，找到</p>
+<p><code>用户-&gt;你的计算机名-&gt;.ssh-&gt;id_rsa.pub</code></p>
+<blockquote>
+<p>.ssh</p>
+<blockquote>
+<p>id_rsa  这个文件里面的就是你的私钥<br><br>id_rsa.pub 这个就是公钥</p>
+</blockquote>
+</blockquote>
+<p>打开公钥，复制内容，打开github，在</p>
+<p><code>setting-&gt;SSH and GPG keys</code></p>
+<p>将内容沾到 ssh 框内，title 随意。</p>
 
       
 
@@ -265,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://chensenling.github.io/2020/02/17/git%20push%20%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://chensenling.github.io/2020/02/21/Git%20%E5%85%B3%E8%81%94%E8%BF%9C%E7%A8%8B%E5%BA%93github/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -279,15 +282,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/21/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/02/21/%E5%9F%BA%E4%BA%8E%20hexo%20%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Git常用命令
+          基于 hexo 的博客主题更换
         
       </div>
     </a>
   
+  
+    <a href="/2020/02/21/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git常用命令</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
